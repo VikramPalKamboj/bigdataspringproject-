@@ -1,18 +1,3 @@
-/*
- * Copyright 2014-2016 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package example.springdata.rest.stores;
 
 import static org.springframework.hateoas.MediaTypes.*;
@@ -49,11 +34,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * A test case to discover the search resource and execute a predefined search with it.
- * 
- * @author Oliver Gierke
- */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @Slf4j
@@ -77,11 +57,9 @@ public class StarbucksClient {
 
 		Traverson traverson = new Traverson(URI.create(String.format(SERVICE_URI, port)), MediaTypes.HAL_JSON);
 
-		// Set up path traversal
 		TraversalBuilder builder = traverson. //
 				follow("stores", "search", "by-location");
 
-		// Log discovered
 		log.info("");
 		log.info("Discovered link: {}", builder.asTemplatedLink());
 		log.info("");

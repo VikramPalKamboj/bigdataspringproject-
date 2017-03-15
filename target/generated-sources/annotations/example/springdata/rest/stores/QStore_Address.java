@@ -8,10 +8,6 @@ import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 
-
-/**
- * QStore_Address is a Querydsl query type for Address
- */
 @Generated("com.querydsl.codegen.EmbeddableSerializer")
 public class QStore_Address extends BeanPath<Store.Address> {
 

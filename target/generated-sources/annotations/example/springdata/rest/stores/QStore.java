@@ -9,10 +9,6 @@ import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.dsl.PathInits;
 
-
-/**
- * QStore is a Querydsl query type for Store
- */
 @Generated("com.querydsl.codegen.EntitySerializer")
 public class QStore extends EntityPathBase<Store> {
 
